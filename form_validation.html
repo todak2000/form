@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FORM VALIDATION</title>
+	<style type="text/css">
+		input{
+			  display: block;
+			}
+
+			p{
+			  color: red;
+			}
+	</style>
+	
+</head>
+<body>
+	<form action="" onsubmit = "return verify()" method="POST">
+  <input id="username" name="username" type="text">Enter your name</input>
+	<p id="validationMessage" hidden>Number must be between 10-12</p>
+	<p id="nanMessage" hidden>Please enter a numeric value</p>
+	<input id="number" name="number" type="text">Enter a number between 40-90</input>
+	<input type="submit"></input>
+	</form>
+
+	<script type="text/javascript">
+		var numberInput = document.getElementById("number");
+		var validationMessage = document.getElementById("validationMessage");
+
+		function verify(){
+		  if(numberInput.value < 11 || numberInput.value > 12){
+		    validationMessage.style.display = "block";
+		    return false;
+		  }
+		  else if(isNaN(numberInput.value)){
+		    nanMessage.style.display = "block";
+		  }
+		  else{
+		    validationMessage.style.display = "none";
+		    return true;
+		  }
+		}
+
+		numberInput.onchange = function(){
+		  if(isNaN(numberInput.value)){
+		    nanMessage.style.display = "block";
+		  }
+		  else{
+		    nanMessage.style.display = "none";
+		  }
+		}
+	</script>
+</body>
+</html>

@@ -2,16 +2,7 @@
 <html>
 <head>
 	<title>FORM VALIDATION</title>
-	<style type="text/css">
-		input{
-			  display: block;
-			}
-
-			p{
-			  color: red;
-			}
-	</style>
-	
+	<link rel="stylesheet" type="text/css" href="css/form.css">
 </head>
 <body>
 	<form action="" onsubmit = "return verify()" method="POST">
@@ -21,33 +12,7 @@
 	<input id="number" name="number" type="text">Enter a number between 40-90</input>
 	<input type="submit"></input>
 	</form>
-
-	<script type="text/javascript">
-		var numberInput = document.getElementById("number");
-		var validationMessage = document.getElementById("validationMessage");
-
-		function verify(){
-		  if(numberInput.value < 11 || numberInput.value > 12){
-		    validationMessage.style.display = "block";
-		    return false;
-		  }
-		  else if(isNaN(numberInput.value)){
-		    nanMessage.style.display = "block";
-		  }
-		  else{
-		    validationMessage.style.display = "none";
-		    return true;
-		  }
-		}
-
-		numberInput.onchange = function(){
-		  if(isNaN(numberInput.value)){
-		    nanMessage.style.display = "block";
-		  }
-		  else{
-		    nanMessage.style.display = "none";
-		  }
-		}
-	</script>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/form.js"></script>
 </body>
 </html>

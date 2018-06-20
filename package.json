@@ -1,0 +1,22 @@
+{
+  "name": "form_node_project",
+  "version": "1.0.0",
+  "description": "a simple form tested in node.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/todak2000/form.git"
+  },
+  "author": "Olagunju Daniel Tosin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/todak2000/form/issues"
+  },
+  "homepage": "https://github.com/todak2000/form#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
